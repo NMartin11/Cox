@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
@@ -11,13 +12,9 @@ public class Main {
     {
         prepCoeff prep = new prepCoeff();
         List<Object> coeff = new ArrayList<>();
+        HashMap<String,Double> model = new HashMap<String,Double>();
 
-        coeff = prep.loadCoefficients();
-
-        for(int i = 0; i < coeff.size(); i++)
-        {
-            System.out.println(i + " " + coeff.get(i));
-        }
+        model = prep.getModel("recurrence");
     }
 
 }
